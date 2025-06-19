@@ -30,4 +30,10 @@ export PLAYWRIGHT_SERVICE_URL=wss://eastus.api.playwright.microsoft.com/accounts
 Finally, on the terminal, enter the following prompt:
 npx playwright test --config=playwright.service.config.js --workers=20
 
+AZURE PLAYWRIGHT WORKSPACE (CHRISTIAN)
+https://playwright.microsoft.com/workspaces/eastus_15df9e09-1ab7-4a3a-b085-dd77c31d490d
+
+REPOSITORIES AND PIPELINES USING AZURE DEVOPS PORTAL
+
+
 
