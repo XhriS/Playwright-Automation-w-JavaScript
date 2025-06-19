@@ -1,0 +1,11 @@
+https://www.npmjs.com/package/exceljs - To download exceljs through the terminal.
+
+Move to the directory/folder where you plan to install exceljs. 
+Enter npm init
+Press enter multiple times until you're prompted with a yes?
+Write yes and press Enter
+On the terminal, type in npm install exceljs --savedev to install exceljs
+
+https://rahulshettyacademy.com/upload-download-test/index.html - To download test template
+
+On the VS terminal, go to the directory where this project is located and enter node ExcelDemo.js to run the test file

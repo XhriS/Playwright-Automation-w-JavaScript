@@ -1,0 +1,33 @@
+Running Playwright tests in parallel on Azure Cloud-hosted browsers with CI/CD Integration
+
+To Register for an account:
+https://azure.microsoft.com/en-us/products/devops
+
+Create an account and look up "playwright testing" under resources. Create a workspace using your existing free subscription,
+For resource group, use testingPR as an example.
+For Instance name, use prtestforchris as an example.
+For Region, use any available region.
+Click Review and Create button.
+
+QUICKSTART GUIDE TO PLAYWRIGHT WITH AZURE
+https://learn.microsoft.com/en-us/azure/playwright-testing/quickstart-run-end-to-end-tests?tabs=playwrightcli&pivots=playwright-test-runner
+
+This is where your playwright results will display. Log in:
+https://playwright.microsoft.com/
+Upon logging in and selecting your workspace, follow the instructions below
+
+
+Enter the following command in VS Project for Azure to be able to see your project and install a playwright.service.config.js file which will be used to run the project in the cloud:
+npm init @azure/microsoft-playwright-testing
+Install Azure CLI with Homebrew on a command prompt
+Log into Azure through the command prompt:
+az login (It'll open a microsoft login window which you should authenticate with. Upon logging in, the CLI will log you in)
+This should allow you to communicate your project to the cloud with the Azure account you created.
+
+On the command prompt, define your region's endpoint where ypu'll be running your project by entering the following command:
+export PLAYWRIGHT_SERVICE_URL=wss://eastus.api.playwright.microsoft.com/accounts/eastus_15df9e09-1ab7-4a3a-b085-dd77c31d490d/browsers
+
+Finally, on the terminal, enter the following prompt:
+npx playwright test --config=playwright.service.config.js --workers=20
+
+

@@ -1,0 +1,13 @@
+KEY POINTS
+TypeScript is a superset of JavaScript, so all valid JS code is also valid TS code.
+TypeScript syntax extensions primarily focus on addind type annotations and other features that enhance code quality, readability, and maintainability.
+TypeScript = JS + Additional features
+JS runs on Node.js
+TypeScript -> JS -> Node.js
+demo.ts -> tsc demo.ts (to run TS) -> demo.js
+demo.js -> node demo.js (to run JS)
+
+KEY DIFFERENCES
+*Static typing: TS checks types during development, catching errors before you run your code. JS is dynamically typed, meaning type errors only surface at runtime
+*Strong typing: TS enforces strict rules about how to use types, preventing you from accidentally mixing incompatible types. JS is more lenient.
+*Type definitions: TS allows you to define complex types (interfaces, objects, etc.) for better code organization and understanding.

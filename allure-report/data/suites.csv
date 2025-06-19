@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","11","@Web Page Context Playwright test","","Wed Jun 18 16:10:53 CDT 2025","failed","Wed Jun 18 16:10:53 CDT 2025","","1UIBasicstest.spec.js","",""
+"","6","@Web Screenshot & Visual Comparison","","Wed Jun 18 16:10:53 CDT 2025","failed","Wed Jun 18 16:10:53 CDT 2025","","5MoreValidations.spec.js","",""
+"","8","@Web Client App Login for Adidas Orignals","","Wed Jun 18 16:10:54 CDT 2025","failed","Wed Jun 18 16:10:54 CDT 2025","","11ClientAppPageObjectImpl.spec.js","",""
+"","10","@Web Client App Login for ZARA COAT 3","","Wed Jun 18 16:10:53 CDT 2025","failed","Wed Jun 18 16:10:53 CDT 2025","","11ClientAppPageObjectImpl.spec.js","",""

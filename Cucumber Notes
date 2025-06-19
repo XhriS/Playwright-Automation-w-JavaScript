@@ -1,0 +1,45 @@
+Website: cucumber.io
+
+Gherkin language/syntax (plain english). It's an interface you're placing on top of the existing code to make it understandable.
+Cucumber is a framework you can add to the existing Playwright framework.
+Cucumber is a tool for running automated tests written in plain language. Because they're written in plain language, they can be read by anyone on your team. Because they can be read by anyone, you can use them to help improve communication, collaboration and trust on your team.
+
+Github: github.com/cucumber/cucumber-js
+
+To install cucumber, type this in the terminal in VS: 
+npm install @cucumber/cucumber
+Then, in VS click on the extensions icon on the left side of the navigation tree (blocks icon) and search for "Cucumber (Gherkin) Full Support"
+
+In Cucumber, Feature file is a test suite which can contain multiple test cases. 
+Each scenario we treat it as 1 test case. 
+Each scenario starts with GIVEN, WHEN, THEN
+
+To start creating feature files, create a features folder at the project level.
+
+To run Cucumber:
+npx cucumber-js --exit
+
+Hooks are used for setup and teardown the environment before and after each scenario. 
+
+npx cucumber-js features/ErrorValidations.feature --exit (example to run only 1 feature file)
+
+You can use @ (Tags) in a feature file (after the scenario name) to define certain feature files in a specific cateegory (i.e. @Regression). Use the following command to run these tags:
+npx cucumber-js --tags "@Regression" --exit   
+
+You can use tags in hooks as well. See more examples in cucumber-js github.
+Before({tags: "@foo"}, async function()...
+
+PARAMETERIZATION
+For Feature files with multiple data sets, you have to use "Scenario Outline" instead of "Scenario". Additionally, you have to add "Examples" below the feature to add different variations of data sets and you have to add <parameter> in the scenario where each data set will be invoked.
+
+PARALLEL
+Cucumber cannot run multiple feature files in parallel. However, it can run multiple scenarios within a feature file. To run multiple scenarios in parallel, use the following command:
+npx cucumber-js features/Ecommerce.feature --parallel 2 --exit (the number represents the amount of scenarios in a feature file)
+
+HTML Reports
+To generate an HTML report, use the following command:
+npx cucumber-js features/Ecommerce.feature --parallel 2 --format html:ChristianCucumber-report.html --exit 
+
+RETRY
+To retry running a feature file, type the following command:
+npx cucumber-js features/Ecommerce.feature --tags "@Regression" --retry 1 --format html:ChristianCucumber-report.html --exit 

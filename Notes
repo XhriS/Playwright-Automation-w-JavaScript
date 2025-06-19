@@ -1,0 +1,33 @@
+npx playwright codegen https://google.com (to record an automated script and playback)
+npx playwright test --debug (to debug a test)
+npx playwright test --ui (open UI test runner)
+
+To debug in VS Code, in the package.json file, copy the npx command you use in the terminal to run your test file and paste it in the scripts section. Then, press Command Shift P and select Debug npm script. When debugging, it is recommended to expand the timeout in the playwright.config.js file to 100 * 1000 or higher; if not, the test will fail due to timeout. Debugging in VS Code is ideal for API testing as Playwright inspector won't do it as it is only meant to test Web UI sites.
+
+trace.playwright.dev (to view trace logs)
+
+npx playwright test tests/example.spec.js --config playwrightexampleconfigfile.config.js (to run a custom configuration file)
+npx playwright test tests/example.spec.js --config playwrightexampleconfigfile.config.js --project=safari execution (to run the safari instance in a custom configuration file. This is used to run tests in different browsers with different configurations. NOTE: If no project is defined, it will run all projects/browsers defined in the config file)
+
+When triggering the *npx playwright test* command without any tests specified, test files will trigger in parallel. However, individual tests in a test file will run in sequence (one after the other). It can run up to 5 test files at a time in parallel
+
+MoreValidations.spec.js - How to run tests within the same test file in parallel. For serial mode, it will run tests in sequence but if one of them fails, the sub-sequential tests will not be run; this is useful for test cases that are dependent on previous tests to function correctly.
+
+test.skip will skip a test. It is useful when running similar tests that perform the same functions or when you are using the same user credentials to log into a site and perform actions.
+
+Using @ tag (i.e. @Web or @Smoke or @Regression or @API) in the test case name will allow you to run those specific tests only. Use:
+npx playwright test --grep @Web
+
+npm i -D @playwright/test allure-playwright
+brew install allure  (Run both commands to install Allure reporting)
+Then, run npx playwright test --grep @Web --reporter=line,allure-playwright (to run test cases and generate an allure report based on line report)
+Then, run allure generate ./allure-results --clean (to generate allure report)
+allure open ./allure-report (to open allure report)
+
+In package.json you can configure custom commands to run specific tests (please view config file to view examples). To run web tests for example (webTests was configure in the config file), type:
+npm run webTests 
+
+When configuring a project in Jenkins, select a new Item > Freestyle project (Name it however you want) > Under the General tab, select "Use custom workspace" and enter the path of the project (i.e. /Users/christiansanchez/PlayWrightAutomation).
+If npm command does not work, follow the instructions mentioned in the following URL: https://stackoverflow.com/questions/45914038/jenkins-unable-to-find-npm
+
+Typically, we use Playwright with Mocha framework
