@@ -1,3 +1,7 @@
+trigger:
+- master
+
+steps:
 - task: PowerShell@2
   enabled: true
   displayName: "Install dependencies"
@@ -18,7 +22,7 @@
     scriptLocation: 'inlineScript'
     inlineScript: |
       npx playwright test calendar.spec.js --config=playwright.service.config.ts
-  addSpnToEnvironment: true
+    addSpnToEnvironment: true
 
 - task: PublishPipelineArtifact@1
   displayName: Upload Playwright report

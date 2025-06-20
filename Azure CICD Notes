@@ -34,6 +34,10 @@ AZURE PLAYWRIGHT WORKSPACE (CHRISTIAN)
 https://playwright.microsoft.com/workspaces/eastus_15df9e09-1ab7-4a3a-b085-dd77c31d490d
 
 REPOSITORIES AND PIPELINES USING AZURE DEVOPS PORTAL
+https://dev.azure.com/zeroxhris/_git/TestSpace (Repo)
+https://dev.azure.com/zeroxhris/TestSpace/_build (Pipeline)
+
+https://portal.azure.com/#@zeroxhrishotmail.onmicrosoft.com/resource/subscriptions/a1370db9-c16c-449d-af2d-49cfb1ac8df6/resourceGroups/TestingPR/overview (Resources/subscriptions - Playwright)
 
 
 
